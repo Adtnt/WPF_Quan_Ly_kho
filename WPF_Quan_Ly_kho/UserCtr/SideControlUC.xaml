@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="WPF_Quan_Ly_kho.UserCtr.SideControlUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Name="ucSideControl"
+             xmlns:local="clr-namespace:WPF_Quan_Ly_kho.UserCtr" 
+             xmlns:viewmodel="clr-namespace:WPF_Quan_Ly_kho.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:SideControlViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+
+
+    <Grid Background="DarkSlateGray" Width="120" HorizontalAlignment="Left">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Button Background="SeaGreen" BorderBrush="DarkGray" Command="{Binding InputCommand}" Grid.Column="0" ToolTip="Nhập kho" Height="60">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Nhập kho" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <materialDesign:PackIcon HorizontalAlignment="Center" Width="24" Height="24"  Kind="ArrowDownBoldCircleOutline" />
+                    </Grid>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Button Background="SeaGreen" BorderBrush="DarkGray" Command="{Binding OutputCommand}" Grid.Column="0" ToolTip="Xuất kho" Height="60">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Xuất kho" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <materialDesign:PackIcon Width="24" Height="24"  HorizontalAlignment="Center"  Kind="ArrowUpBoldCircleOutline" />
+                    </Grid>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Button Background="SeaGreen" BorderBrush="DarkGray" Command="{Binding MaterialCommand}" Grid.Column="0" ToolTip="Vật tư" Height="60">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Vật tư" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <materialDesign:PackIcon Width="24" Height="24"  HorizontalAlignment="Center"  Kind="Dns" />
+                    </Grid>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Button Background="SeaGreen" BorderBrush="DarkGray" Command="{Binding UnitCommand}" Grid.Column="0" ToolTip="Đơn vị đo" Height="60">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Đơn vị đo" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <materialDesign:PackIcon Width="24" Height="24"  HorizontalAlignment="Center"  Kind="Altimeter" />
+                    </Grid>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Button Background="SeaGreen" BorderBrush="DarkGray" Command="{Binding SuplierCommand}" Grid.Column="0" ToolTip="Nhà cung cấp" Height="60">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Nhà cung cấp" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <materialDesign:PackIcon Width="24" Height="24"  HorizontalAlignment="Center"  Kind="Factory" />
+                    </Grid>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Button Background="SeaGreen" BorderBrush="DarkGray" Command="{Binding CustomerCommand}" Grid.Column="0" ToolTip="Khách hàng" Height="60">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Khách hàng" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <materialDesign:PackIcon Width="24" Height="24"  HorizontalAlignment="Center"  Kind="HumanHandsup" />
+                    </Grid>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Button Background="SeaGreen" BorderBrush="DarkGray" Command="{Binding UserCommand}" Grid.Column="0" ToolTip="Người dùng" Height="60">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock Text="Người dùng" HorizontalAlignment="Center"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <materialDesign:PackIcon Width="24" Height="24"  HorizontalAlignment="Center"  Kind="Account" />
+                    </Grid>
+                </Grid>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>
